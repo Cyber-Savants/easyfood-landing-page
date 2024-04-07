@@ -49,25 +49,44 @@ nav {
     display: none; /* Ocultar el icono del menú en pantallas grandes */
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 768px) {  
+  nav{
+    margin-bottom: 0;
+    
+  }
+
     .nav-links {
         display: none; /* Ocultar la lista de navegación en pantallas pequeñas */
         flex-direction: column;
-        background-color: #e74c3c;
+        background-color: #e36f62;
         position: absolute;
-        top: 70px; /* Ajusta según la altura de la barra de navegación */
+        top: 50px; /* Ajusta según la altura de la barra de navegación */
         left: 0;
         width: 100%;
+
+        height: calc(100vh - 50px); /* Ocupa toda la altura disponible menos la altura de la barra de navegación */
+        overflow-y: auto; /* Añadir desplazamiento vertical si la lista es muy larga */
+        padding-top: 10px; /* Añadir espacio superior */
+        padding-bottom: 10px; /* Añadir espacio inferior */
     }
 
     .nav-links li {
-        text-align: center;
+        display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
     }
-
+  
     .menu-icon {
         display: block; /* Mostrar el icono del menú en pantallas pequeñas */
         cursor: pointer;
     }
+
+    .nav-links.show {
+
+        display: flex; /* Mostrar la lista de navegación cuando la clase 'show' está presente */
+    }
+    
 }
 
   

@@ -1,0 +1,75 @@
+/* Estilos para la barra de navegación */
+body{
+    margin: 0;
+    padding: 0;
+    font-family:'Montserrat', sans-serif;
+
+}
+nav {
+    background-color: #e74c3c;
+    color: #fff;
+    padding: 10px 80px; /* Añadir relleno izquierdo y derecho */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative; /* Agregar posición relativa */
+  }
+  
+  nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    width: calc(100% - 160px); /* Ancho total menos el espacio del relleno */
+  }
+  
+  nav ul li {
+    flex-grow: 1;
+    text-align: center; /* Centrar el texto */
+  }
+  
+  nav img {
+    height: 40px; /* Ajusta la altura según tu logo */
+    margin-right: 40px; /* Espacio entre el logo y el primer elemento */
+  }
+  
+  
+  nav ul li:last-child {
+    margin-right: 0;
+  }
+  
+  nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+ /* Estilos para el menú desplegable */
+.menu-icon {
+    display: none; /* Ocultar el icono del menú en pantallas grandes */
+}
+
+@media screen and (max-width: 768px) {
+    .nav-links {
+        display: none; /* Ocultar la lista de navegación en pantallas pequeñas */
+        flex-direction: column;
+        background-color: #e74c3c;
+        position: absolute;
+        top: 70px; /* Ajusta según la altura de la barra de navegación */
+        left: 0;
+        width: 100%;
+    }
+
+    .nav-links li {
+        text-align: center;
+    }
+
+    .menu-icon {
+        display: block; /* Mostrar el icono del menú en pantallas pequeñas */
+        cursor: pointer;
+    }
+}
+
+  
+
+  

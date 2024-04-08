@@ -2,11 +2,11 @@
 body{
     margin: 0;
     padding: 0;
-    font-family:'Montserrat', sans-serif;
+    font-family:'Playfair Display', serif;
 
 }
 nav {
-    background-color: #e74c3c;
+    background-color: #000000;
     color: #fff;
     padding: 10px 80px; /* Añadir relleno izquierdo y derecho */
     display: flex;
@@ -49,6 +49,13 @@ nav {
     display: none; /* Ocultar el icono del menú en pantallas grandes */
 }
 
+nav ul li a:hover {
+    color: #7fc3b1;
+}
+.material-symbols-outlined:hover{
+    color: #7fc3b1;
+}
+
 @media screen and (max-width: 768px) {  
   nav{
     margin-bottom: 0;
@@ -58,7 +65,7 @@ nav {
     .nav-links {
         display: none; /* Ocultar la lista de navegación en pantallas pequeñas */
         flex-direction: column;
-        background-color: #e36f62;
+        background-color: #7fc3b1;
         position: absolute;
         top: 50px; /* Ajusta según la altura de la barra de navegación */
         left: 0;
@@ -68,6 +75,7 @@ nav {
         overflow-y: auto; /* Añadir desplazamiento vertical si la lista es muy larga */
         padding-top: 10px; /* Añadir espacio superior */
         padding-bottom: 10px; /* Añadir espacio inferior */
+        z-index: 2; /* Asegurar que la lista de navegación esté en la parte superior */
     }
 
     .nav-links li {
@@ -91,4 +99,98 @@ nav {
 
   
 
-  
+  /*Seccion Hero*/
+  .hero {
+    position: relative;
+    width: 100%;
+    height: 510px; /* Ajusta la altura según sea necesario */
+    background-color: #7fc3b1; /* Color de fondo del banner */
+    overflow: hidden;
+    z-index: 1;
+}
+
+.corner-image {
+    position: absolute;
+    width: 270px; /* Tamaño de las imágenes en las esquinas */
+    height: 270px;
+}
+
+/* arriba-izquierda */
+.top-left {
+    top: 0px;
+    left: 80px;
+
+}
+
+/* arriba-derecha */
+.top-right {
+    top: 10px;
+    right: 120px;
+}
+
+/* abajo-izquierda-ensalada */
+.bottom-left {
+    width: 400px;
+    height: 400px;  
+    bottom: -120px;
+    left: 80px;
+}
+
+/* abajo-derecha-lomo */
+.bottom-right {
+    width: 524px;
+    height: 422px;
+    bottom: -130px;
+    right: 60px;
+}
+
+.centered-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.main-text {
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.sub-text {
+    font-size: 18px;
+    color: #3b3b3b;
+    margin-bottom: 20px;
+}
+
+.cta-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #3F3A3A; /* Color del botón */
+    color: #fff; /* Color del texto del botón */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+
+}
+
+.cta-button:hover {
+    background-color: #686b69;
+   
+}   
+
+
+.funcionamiento{
+  width: 100%;
+  height: 500px;
+  background-color: #e0e0e0;
+}
+
+@media screen and (max-width: 986px){
+    .corner-image{
+        display: none;
+    }
+}

@@ -217,12 +217,10 @@ nav ul li a:hover {
 }
 
 .func-title{
-    display: flex;
-    align-items: center;
-    height: 20%;
-    font-size: 36px;
-    font-weight: bold;
     text-align: center;
+    font-size: 36px;
+    margin-top: 50px;
+    font-weight: 600;
 }
 
 
@@ -328,7 +326,8 @@ body {
 
 .membership {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
+    align-items: center;
     margin-top: 80px;
     flex-wrap: wrap;
 }
